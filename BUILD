@@ -20,3 +20,17 @@ cc_binary(
              '//third_party/tensorflow-1.15',
            ],
 )
+
+cc_binary(
+    name = "model_save",
+    srcs = glob([
+      'model/save_model.cpp',
+      'model/tensor_util.h'
+    ]),
+    includes = [
+      'third_party/tensorflow-1.15/include'
+    ],
+    deps = [
+      '//third_party/tensorflow-1.15'
+    ],
+)
