@@ -9,6 +9,7 @@
 
 using namespace tensorflow;
 using namespace std;
+using namespace tftest;
 
 constexpr char kTestDataPbTxt[] =
     "cc/saved_model/testdata/half_plus_two_pbtxt/00000123";
@@ -98,7 +99,7 @@ int main (int argc, char** argv) {
 
     // Run the regressor to get a prediction.
     std::vector<Tensor> outputs;
-    Status status = bundle.session->Run({{input_name, input}}, {output_name}, {}, &outputs);
+    status = bundle.session->Run({{input_name, input}}, {output_name}, {}, &outputs);
     if (status.ok()) {
       std::cout << "Outputs: ";
       for (const auto& output : outputs) {

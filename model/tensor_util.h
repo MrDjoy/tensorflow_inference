@@ -10,6 +10,8 @@
 
 using namespace tensorflow;
 
+namespace tftest {
+
 // Constructs a scalar tensor with 'val'.
 template <typename T>
 Tensor AsScalar(const T& val) {
@@ -227,4 +229,6 @@ void ExpectTensorNear(const Tensor& x, const Tensor& y, const double abs_err) {
                 "T is not a floating point types.");
   ASSERT_GE(abs_err, 0.0) << "abs_error is negative" << abs_err;
   internal::Expector<T>::Near(x, y, abs_err);
+}
+
 }
