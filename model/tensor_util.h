@@ -6,7 +6,7 @@
 #include <tensorflow/core/framework/tensor.h>
 #include <tensorflow/core/lib/gtl/array_slice.h>
 #include <tensorflow/core/platform/logging.h>
-#include "tensorflow/core/platform/test.h"
+#include <gtest/gtest.h>
 
 using namespace tensorflow;
 

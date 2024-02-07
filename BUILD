@@ -31,6 +31,7 @@ cc_binary(
       'third_party/tensorflow-1.15/include'
     ],
     deps = [
-      '//third_party/tensorflow-1.15'
+      '//third_party/tensorflow-1.15',
+      '@com_google_googletest//:gtest'
     ],
 )

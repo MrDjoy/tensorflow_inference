@@ -28,3 +28,10 @@ http_archive(
     strip_prefix = "protobuf-310ba5ee72661c081129eb878c1bbcec936b20f0",
         urls = ["https://yysdkoss.oss-cn-shenzhen.aliyuncs.com/sdk_management/yylive-recommended/protobuf/3.8/310ba5ee72661c081129eb878c1bbcec936b20f0.tar.gz"],
 )
+
+http_archive(
+    name = "com_google_googletest",
+    strip_prefix = "googletest-release-1.8.1",
+	url = "https://yyci2020.oss-cn-shenzhen.aliyuncs.com/sdk_management/rslibs/googletest/1/googletest-release-1.8.1.tar.gz",
+    sha256 = "9bf1fe5182a604b4135edc1a425ae356c9ad15e9b23f9f12a02e80184c3a249c",
+)
