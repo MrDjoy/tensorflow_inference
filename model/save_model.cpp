@@ -64,7 +64,7 @@ int main (int argc, char** argv) {
     RunOptions run_options;
 
     const char* model_dir = getenv("MODEL_DIR");
-    if (!model_dir || model_dir[0] == '\0') {
+    if (model_dir == nullptr || model_dir[0] == '\0') {
         model_dir = "tensorflow";
     }
     const std::string model_path = io::JoinPath(model_dir, "testdata/half_plus_two_pbtxt/00000123");
