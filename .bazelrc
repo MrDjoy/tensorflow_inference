@@ -1,0 +1,7 @@
+build --cxxopt='-g'
+build --cxxopt='-std=c++17'
+build --cxxopt='-mavx2'
+build --cxxopt="-D_GLIBCXX_USE_CXX11_ABI=0"
+build:dbg --cxxopt='-O0'
+build:opt --cxxopt='-O2'
+build:opt --cxxopt='-finline-functions'
