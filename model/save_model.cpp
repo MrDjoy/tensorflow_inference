@@ -61,6 +61,7 @@ int main (int argc, char** argv) {
 
     SavedModelBundle bundle;
     SessionOptions session_options;
+    session_options.config.mutable_gpu_options()->set_allocator_type("/job:localhost/replica:0/task:0/device:GPU:0");
     RunOptions run_options;
 
     const char* model_dir = getenv("MODEL_DIR");
@@ -76,7 +77,7 @@ int main (int argc, char** argv) {
 
     // ValidateAssets(export_dir, bundle);
     // print bundle.meta_graph_def
-    std::cout << bundle.meta_graph_def.DebugString() << std::endl;
+    // std::cout << bundle.meta_graph_def.DebugString() << std::endl;
 
 
     // Retrieve the regression signature from meta graph def.
